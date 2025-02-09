@@ -113,3 +113,20 @@ let tracker = createExpenseTracker();  // assigns tracker the output of the func
 // line 114 and 115 run the function using testing data
 console.log(tracker(200));
 console.log(tracker(150));
+
+
+//  Task 8: Recursion in JavaScript
+
+
+// the lines below are a recursive function that calculates the amount of years until you are at level 10, it multiplys your level by 2 then subtracts it from 20
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        console.log(`Years to level 10: ${20 - (employeeLevel * 2)}`);
+    } else {  // if employee level is less than 10 tha it will run the else code
+        console.log(`Years to level 10: ${20 - (employeeLevel * 2)}`);
+    };
+};
+
+//  lines 131 and 132 run the calculate years to promotion function using the test data
+calculateYearsToPromotion(7);
+calculateYearsToPromotion(5);
