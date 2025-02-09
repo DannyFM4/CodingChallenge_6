@@ -43,3 +43,24 @@ const calculateBonus = (salary, performanceRating) => {
 //  lines 44 and 45 run the function above using the test data
 calculateBonus(5000, "Excellent");
 calculateBonus(7000, "Good");
+
+
+//  Task 4: Parameters and Arguments
+
+
+// the lines below are a function that calculates the total cost of the subscription by multiplying months by price and subtracting any discount then logs it in the console
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    if (plan === "Basic") {
+        console.log(`Total Cost: $${(months * 10) - discount}`);
+    };
+    if (plan === "Premium") {
+        console.log(`Total Cost: $${(months * 20) - discount}`);
+    };
+    if (plan === "Enterprise") {
+        console.log(`Total Cost: $${(months * 50) - discount}`);
+    };
+};
+
+//  lines 65 and 66 run the calculateSubscriptionCost function using the test data
+calculateSubscriptionCost("Basic", 6, 10);
+calculateSubscriptionCost("Premium", 12, 0);
