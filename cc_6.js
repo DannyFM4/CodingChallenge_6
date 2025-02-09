@@ -77,3 +77,20 @@ function convertCurrency(amount, exchangeRate) {
 //  lines 78 and 79 run the convertCurrency function using the test data
 convertCurrency(100, 1.1);
 convertCurrency(250, 0.85);
+
+
+//  Task 6: Higher-Order Functions
+
+let orders = [200, 600, 1200, 450, 800]; // declares array
+
+//  the lines below are a function that uses the map method to go through the array and apply the discount function to any number that qualifies
+function applyBulkDiscount(order, discountFunction) {
+    return order.map(discountFunction);
+};
+
+// line 92 is an arrow function that sets the parameters and what to do if a number qualifies
+let discount10percent = (order) => order > 500 ? order * 0.9 : order;
+
+// lines 95 and 96 run the function and log it in the console
+discountedPurchases = applyBulkDiscount(orders, discount10percent);
+console.log(discountedPurchases);
