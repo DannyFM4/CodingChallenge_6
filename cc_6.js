@@ -94,3 +94,22 @@ let discount10percent = (order) => order > 500 ? order * 0.9 : order;
 // lines 95 and 96 run the function and log it in the console
 discountedPurchases = applyBulkDiscount(orders, discount10percent);
 console.log(discountedPurchases);
+
+
+// Task 7: Closures
+
+
+// the lines below are a function that tracks the total expenses by adding them together, and returns a message with the total
+function createExpenseTracker() {
+    let total = 0;
+
+    return function (expense){
+        return `Total Expense: $${total += expense}`;
+    } ;
+};
+
+let tracker = createExpenseTracker();  // assigns tracker the output of the function
+
+// line 114 and 115 run the function using testing data
+console.log(tracker(200));
+console.log(tracker(150));
