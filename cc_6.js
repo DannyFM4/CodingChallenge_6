@@ -64,3 +64,16 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 //  lines 65 and 66 run the calculateSubscriptionCost function using the test data
 calculateSubscriptionCost("Basic", 6, 10);
 calculateSubscriptionCost("Premium", 12, 0);
+
+
+// Task 5: Returning Values
+
+
+// the lines below are a function that calculates the converted currency by multiplying the amount by the exchange rate and uses a method to round, then logs it in the console using template literals
+function convertCurrency(amount, exchangeRate) {
+    console.log(`Converted Amount: $${(amount * exchangeRate).toFixed(2)}`);
+};
+
+//  lines 78 and 79 run the convertCurrency function using the test data
+convertCurrency(100, 1.1);
+convertCurrency(250, 0.85);
